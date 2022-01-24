@@ -1,10 +1,5 @@
-let a, b, result;
+let a = prompt('Введите значение а', '');
+let b = prompt('Введите значение b', '');
 
-do {
-  alert('Введите два числа');
-  a = parseInt(prompt('Введите значение а', ''));
-  b = parseInt(prompt('Введите значение b', ''));
-} while (isNaN(a,b));
-
-  result = (a == b) ? 'значения равны' : 'значения не равны';
-  alert(result);
+result = (a === b) ? 'значения равны' : 'значения не равны';
+alert(result);
