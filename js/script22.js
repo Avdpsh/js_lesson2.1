@@ -1,10 +1,16 @@
 let a, b, result;
 
 do {
-  alert('Введите два числа');
-  a = parseInt(prompt('Введите значение а', ''));
-  b = parseInt(prompt('Введите значение b', ''));
-} while (isNaN(a,b));
+  alert('Введите две переменных');
+  a = prompt('Введите значение а', '');
+  b = prompt('Введите значение b', '');
+} while ((a.length === 0) || (b.length === 0) || (a.trim() == '') || (b.trim() == ''));
 
-  result = ((a+a) === b) ? 'Значения равны' : 'значения не равны';
-  alert(result);
+if ((isNaN(a)) || (isNaN(b))) {
+  result = ((a + a) === b) ? 'Значения равны' : 'значения не равны';
+} else {
+    result = ((+a + +a) == +b) ? 'Значения равны' : 'значения не равны';
+  }
+
+alert(result);
+  
